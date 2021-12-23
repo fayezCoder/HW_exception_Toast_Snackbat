@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/root">
+
+   <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/guideLineV50"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintGuide_percent="0.5"/>
+
+   <androidx.constraintlayout.widget.Guideline
+       android:id="@+id/guideLineH50"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      app:layout_constraintGuide_percent="0.5"/>
+
+   <Button
+      android:id="@+id/btnIn"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+      android:text="Button1"
+      android:textColor="@color/black"
+      android:backgroundTint="#dcdcdc"
+      app:layout_constraintBottom_toTopOf="@id/guideLineH50"
+      app:layout_constraintEnd_toStartOf="@id/guideLineV50"
+      android:layout_marginEnd="8dp"
+      android:layout_marginBottom="8dp"/>
+      <Button
+         android:id="@+id/btnOut"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="@color/black"
+          android:backgroundTint="#dcdcdc"
+         android:text="Button2"
+         app:layout_constraintBottom_toTopOf="@id/guideLineH50"
+         app:layout_constraintStart_toEndOf="@id/guideLineV50"
+         android:layout_marginBottom="8dp"
+         android:layout_marginStart="8dp"/>
+
+   <Button
+       android:id="@+id/btnToast"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textColor="@color/black"
+       android:backgroundTint="#dcdcdc"
+      android:text="Buttom3"
+      app:layout_constraintTop_toBottomOf="@id/guideLineH50"
+      app:layout_constraintEnd_toStartOf="@id/guideLineV50"
+      android:layout_marginEnd="8dp"/>
+
+   <Button
+       android:id="@+id/btnSnack"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textColor="@color/black"
+       android:backgroundTint="#dcdcdc"
+      android:text="Buttom4"
+      app:layout_constraintTop_toBottomOf="@+id/guideLineH50"
+      app:layout_constraintStart_toEndOf="@id/guideLineV50"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
